@@ -1,0 +1,20 @@
+# rt - recognitiion time 
+face_Recognized = 'rt'
+
+# Opens face recognition log file 
+detection_Log = open("shell_Log.txt", "r")
+
+# Reads face recognition log file contents
+read_Log = detection_Log.read()
+
+# Checks  face recognition log file for recognized user 
+if face_Recognized in read_Log:
+	print('Recogized User Detected')
+else:
+	print('No Recognized User Detected')
+
+# Clears face recognition log file contents
+detection_Log = open("shell_Log.txt", "w")
+
+# Closes face recognition log file 
+detection_Log.close()
